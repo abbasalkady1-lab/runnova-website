@@ -33,8 +33,7 @@ export const HeroSection: React.FC = () => {
 
             {/* Direct B2B ROI-focused H1 with Customization Emphasis */}
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-[52px] font-black text-charcoal tracking-tight leading-[1.14] font-display">
-              <span>{t("titlePrefix")} </span>
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand via-[#5544FF] to-brand-hover inline-block">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand via-[#5544FF] to-brand-hover inline-block pb-[0.2em] -mb-[0.2em]">
                 {t("titleHighlight")}
               </span>{" "}
               <span>{t("titleSuffix")}</span>

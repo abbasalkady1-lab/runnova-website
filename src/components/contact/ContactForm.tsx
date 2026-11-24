@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Send, CheckCircle2, Loader2, AlertCircle } from "lucide-react";
+import { Send, CheckCircle2, Loader2, AlertCircle, MessageCircle } from "lucide-react";
+import { siteConfig } from "@/config/site";
 
 export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) => {
   const t = useTranslations("contact");
@@ -12,7 +13,7 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
     name: "",
     email: "",
     company: "",
-    service: "Custom AI Voice & Chat Agents",
+    service: t("serviceOption1"),
     message: "",
   });
 
@@ -34,15 +35,26 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
       if (res.ok) {
         setStatus("success");
       } else {
-        const data = await res.json();
-        setErrorMessage(data.error || "Submission error. Please try again.");
+        setErrorMessage(t(res.status === 400 ? "invalidMsg" : "errorMsg"));
         setStatus("error");
       }
-    } catch (err) {
-      // Fallback success for static/offline previews
-      setStatus("success");
+    } catch {
+      setErrorMessage(t("errorMsg"));
+      setStatus("error");
     }
   };
+
+  // Lets a visitor send the same message over WhatsApp when email delivery fails.
+  const whatsappHref = `https://wa.me/${siteConfig.phone.replace(/\D/g, "")}?text=${encodeURIComponent(
+    [
+      `${t("nameLabel")}: ${formData.name}`,
+      `${t("emailLabel")}: ${formData.email}`,
+      `${t("companyLabel")}: ${formData.company}`,
+      `${t("serviceLabel")}: ${formData.service}`,
+      "",
+      formData.message.slice(0, 1000),
+    ].join("\n")
+  )}`;
 
   if (status === "success") {
     return (
@@ -61,9 +73,23 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       {status === "error" && (
-        <div className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-700 flex items-center gap-2">
-          <AlertCircle className="h-4 w-4 flex-shrink-0" />
-          <span>{errorMessage}</span>
+        <div
+          role="alert"
+          className="p-3 rounded-xl bg-rose-50 border border-rose-200 text-xs text-rose-700 space-y-3"
+        >
+          <div className="flex items-center gap-2">
+            <AlertCircle className="h-4 w-4 flex-shrink-0" />
+            <span>{errorMessage}</span>
+          </div>
+          <a
+            href={whatsappHref}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 py-2.5 px-4 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-semibold transition-colors"
+          >
+            <MessageCircle className="h-4 w-4" />
+            <span>{t("whatsappFallbackBtn")}</span>
+          </a>
         </div>
       )}
 
@@ -73,6 +99,7 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
         </label>
         <input
           id="contact-name"
+          maxLength={120}
           required
           type="text"
           placeholder={t("namePlaceholder")}
@@ -89,6 +116,7 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
           </label>
           <input
             id="contact-email"
+            maxLength={200}
             required
             type="email"
             placeholder={t("emailPlaceholder")}
@@ -104,6 +132,7 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
           </label>
           <input
             id="contact-company"
+            maxLength={200}
             required
             type="text"
             placeholder={t("companyPlaceholder")}
@@ -138,6 +167,7 @@ export const ContactForm: React.FC<{ locale?: string }> = ({ locale = "en" }) =>
         </label>
         <textarea
           id="contact-message"
+          maxLength={5000}
           required
           rows={4}
           placeholder={t("messagePlaceholder")}

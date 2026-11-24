@@ -1,25 +1,25 @@
 {
   "meta": {
-    "siteTitle": "Runnova — Enterprise AI Engineering & Custom Business Integration",
-    "siteDescription": "Runnova delivers bespoke AI customization, autonomous agents, and enterprise workflow automations. Run Smarter, Scale Faster.",
-    "solutionsTitle": "Enterprise AI Customization & Solutions | Runnova",
+    "siteTitle": "AI Integration for Business with Full Customization | Runnova",
+    "siteDescription": "AI integration for business with full customization: AI agents, workflow automation, and WhatsApp, CRM and ERP integration. Book a free consultation with Runnova.",
+    "solutionsTitle": "Enterprise AI Customization & Solutions",
     "solutionsDescription": "End-to-end AI customization: bespoke voice & chat agents, private RAG knowledge engines, and systems automation engineered for high-growth enterprises.",
-    "productsTitle": "Ready-to-Deploy AI Products with Customization | Runnova",
+    "productsTitle": "Ready-to-Deploy AI Products with Customization",
     "productsDescription": "Modular AI products built for instant deployment across WhatsApp, CRM, and internal workflows, 100% customizable to your business needs.",
-    "useCasesTitle": "Real-World AI Customization Use Cases | Runnova",
+    "useCasesTitle": "Real-World AI Customization Use Cases",
     "useCasesDescription": "Discover how enterprises scale operations and cut operational costs with Runnova's custom-engineered AI systems.",
     "aboutTitle": "About Runnova | Engineering Philosophy & Enterprise Trust",
     "aboutDescription": "Learn about Runnova's mission to deliver secure, high-ROI AI customization and systems integration with zero private data leakage.",
     "contactTitle": "Contact Runnova | Call 01143072578 & Book AI Consultation",
     "contactDescription": "Connect with our AI systems architects directly via phone 01143072578, WhatsApp, or schedule a free architecture consultation.",
-    "privacyTitle": "Privacy Policy | Runnova",
-    "termsTitle": "Terms of Service | Runnova"
+    "privacyTitle": "Privacy Policy",
+    "termsTitle": "Terms of Service"
   },
   "topBar": {
     "phoneLabel": "Direct Support & Consultation:",
     "phone": "01143072578",
     "whatsapp": "WhatsApp Chat",
-    "customizationBadge": "Bespoke AI Customization & Systems Integration"
+    "customizationBadge": "AI Integration for Business with Full Customization"
   },
   "nav": {
     "solutions": "Solutions",
@@ -33,10 +33,9 @@
   },
   "hero": {
     "eyebrow": "Run Smarter, Scale Faster",
-    "titlePrefix": "We Engineer & Deliver",
-    "titleHighlight": "Bespoke AI Customization",
-    "titleSuffix": "Inside Your Core Enterprise Workflows",
-    "description": "Runnova designs tailored AI integrations and deployable intelligent software that connect your WhatsApp, CRM, and ERP into an automated, high-velocity operational powerhouse.",
+    "titleHighlight": "AI Integration for Business",
+    "titleSuffix": "with Full Customization, Built into Your Systems and Daily Work",
+    "description": "Runnova integrates AI into your business with full customization around the way you work. We connect WhatsApp, CRM and ERP into one system that handles repetitive tasks, so your team can focus on what matters most.",
     "primaryCta": "Book Free AI Consultation",
     "secondaryCta": "Explore Ready Products",
     "callCta": "Call Us: 01143072578",
@@ -161,7 +160,7 @@
   },
   "footer": {
     "tagline": "Run Smarter, Scale Faster",
-    "description": "Runnova is an enterprise AI engineering and systems integration company. We build custom-tailored AI solutions and ready-to-deploy products that automate high-scale business operations.",
+    "description": "Runnova specializes in AI integration for business with full customization: solutions designed around your systems, and ready-made products you can customize.",
     "solutionsHeader": "Solutions",
     "productsHeader": "Products",
     "companyHeader": "Company",
@@ -218,7 +217,10 @@
     "messagePlaceholder": "Tell us briefly about your current software stack and the operational challenges you want to solve...",
     "submitBtn": "Submit Inquiry",
     "submitting": "Transmitting...",
-    "successMsg": "Thank you! Your inquiry has been received. A senior AI architect will contact you within 4 business hours."
+    "successMsg": "Thank you! Your inquiry has been received. A senior AI architect will contact you within 4 business hours.",
+    "errorMsg": "We couldn't send your message right now. Send it on WhatsApp or try again.",
+    "invalidMsg": "Please check your name, email and message.",
+    "whatsappFallbackBtn": "Send on WhatsApp"
   },
   "useCasesPage": {
     "badge": "Proven Results",

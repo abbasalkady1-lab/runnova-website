@@ -39,7 +39,7 @@ export async function generateMetadata({
 
   const isAr = locale === "ar";
   const url = `${siteConfig.url}${isAr ? "/ar" : ""}/solutions/${sol.slug}`;
-  const title = `${sol.title[isAr ? "ar" : "en"]} | ${siteConfig.name}`;
+  const title = `${sol.title[isAr ? "ar" : "en"]}`;
   const description = sol.subtitle[isAr ? "ar" : "en"];
 
   return {

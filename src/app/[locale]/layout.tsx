@@ -8,7 +8,6 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { siteConfig } from "@/config/site";
-import "@/app/globals.css";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -104,6 +103,7 @@ export default async function RootLocaleLayout({
   const isAr = locale === "ar";
   const dir = isAr ? "rtl" : "ltr";
   const messages = await getMessages();
+  const t = await getTranslations({ locale, namespace: "meta" });
 
   // Organization + WebSite JSON-LD Schema
   const rootSchema = {
@@ -118,7 +118,7 @@ export default async function RootLocaleLayout({
         logo: `${siteConfig.url}/icon.svg`,
         slogan: siteConfig.tagline,
         description:
-          "Runnova engineers bespoke AI agents, workflow automations, and private enterprise RAG systems.",
+          t("siteDescription"),
         email: siteConfig.email,
         telephone: siteConfig.phone,
         sameAs: [siteConfig.linkedinUrl, siteConfig.twitterUrl],
