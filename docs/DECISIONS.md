@@ -12,3 +12,8 @@
 - السؤال: المستودع إزاي، وإيه مصير Nova على runnova.cloud؟
 - القرار: مستودع عام باسم runnova-website. Nova تتنقل لعنوان agentnova، والموقع ده ياخد runnova.cloud.
 - السبب/الملاحظة: العنوان الكامل لـ agentnova لسه محتاج تأكيد، والنقل يتم قبل تغيير الدومين.
+
+## 2026-11-25 — عنوان Nova الجديد
+- السؤال: Nova تتنقل على agentnova.cloud ولا agentnova.runnova.cloud؟
+- القرار: agentnova.cloud.
+- السبب/الملاحظة: اختيار صاحب الموقع. تبديل runnova.cloud يتم بعد تجربة Nova على العنوان الجديد.
