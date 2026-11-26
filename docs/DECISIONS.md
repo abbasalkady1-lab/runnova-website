@@ -17,3 +17,8 @@
 - السؤال: Nova تتنقل على agentnova.cloud ولا agentnova.runnova.cloud؟
 - القرار: agentnova.cloud.
 - السبب/الملاحظة: اختيار صاحب الموقع. تبديل runnova.cloud يتم بعد تجربة Nova على العنوان الجديد.
+
+## 2026-11-26 — تبديل runnova.cloud
+- السؤال: نبدّل runnova.cloud لموقع الشركة؟
+- القرار: «بدّل». runnova.cloud وwww بقوا على مشروع موقع الشركة، وNova على agentnova.cloud.
+- السبب/الملاحظة: لينكات Nova القديمة بتتحوّل مؤقتاً (307)، ونخليها دائمة بعد يوم أو اتنين. سجل _vercel في Hostinger ممكن يتشال بعد كده.
