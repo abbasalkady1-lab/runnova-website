@@ -38,7 +38,6 @@ const NOVA_PATHS = [
   "/brand/:path*",
   "/assets/:path*",
   "/voice/:path*",
-  "/google8c4e423408c759c4.html",
   // Nova's other languages (this site only has English and Arabic).
   "/:locale(fr|es|de|it|pt|tr|ru|fa|ur|hi|bn|id|ms|zh|ja|ko|nl|pl|uk|sv)/:path*",
 ];

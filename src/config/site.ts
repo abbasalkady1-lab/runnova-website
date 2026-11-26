@@ -4,6 +4,8 @@ export const siteConfig = {
   tagline: "Run Smarter, Scale Faster",
   domain: "runnova.cloud",
   url: "https://runnova.cloud",
+  /** Link-preview image (src/app/opengraph-image.tsx). */
+  ogImage: "/opengraph-image",
   email: "contact@runnova.cloud",
   supportEmail: "support@runnova.cloud",
   bookingUrl: "https://cal.com/runnova/ai-audit",

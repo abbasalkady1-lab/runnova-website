@@ -29,6 +29,7 @@ export async function generateMetadata({
       },
     },
     openGraph: {
+      images: [siteConfig.ogImage],
       title: t("useCasesTitle"),
       description: t("useCasesDescription"),
       url,
