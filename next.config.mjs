@@ -11,8 +11,8 @@ const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
 // runnova.cloud. Old Nova links keep working by being sent there.
 const NOVA_ORIGIN = "https://agentnova.cloud";
 
-// Pages and files that only exist in the Nova app. Temporary (307) until the
-// owner confirms the move, so it can still be undone.
+// Pages and files that only exist in the Nova app. Permanent (308): the owner
+// made the move final on 2026-11-26.
 const NOVA_PATHS = [
   "/dashboard/:path*",
   "/auth/:path*",
@@ -54,7 +54,7 @@ const nextConfig = {
     return NOVA_PATHS.map((source) => ({
       source,
       destination: `${NOVA_ORIGIN}${source.replace(/\([^)]*\)/g, "")}`,
-      permanent: false,
+      permanent: true,
     }));
   },
   async rewrites() {
